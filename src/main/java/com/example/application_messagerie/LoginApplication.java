@@ -21,7 +21,7 @@ public class LoginApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(
                 LoginApplication.class.getResource("Login.fxml")
         );
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 580, 600);
         stage.setTitle("Messagerie Interne");
         stage.setScene(scene);
         stage.show();
