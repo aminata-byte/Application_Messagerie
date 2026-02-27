@@ -24,10 +24,14 @@ module com.example.application_messagerie {
     // Ouvrir les packages à JavaFX et Hibernate
     opens com.example.application_messagerie to javafx.fxml;
     opens com.example.application_messagerie.utils to org.hibernate.orm.core;
-    opens com.example.application_messagerie.entity to org.hibernate.orm.core;
+    opens com.example.application_messagerie.entity to org.hibernate.orm.core, com.fasterxml.jackson.databind;
     opens com.example.application_messagerie.client.controller to javafx.fxml;
+    opens com.example.application_messagerie.protocol to com.fasterxml.jackson.databind;
+    opens com.example.application_messagerie.server.service to org.hibernate.orm.core;
+    opens com.example.application_messagerie.server.repository to org.hibernate.orm.core;
 
     exports com.example.application_messagerie;
-
-
+    exports com.example.application_messagerie.protocol;
+    exports com.example.application_messagerie.entity;
+    exports com.example.application_messagerie.client;
 }
